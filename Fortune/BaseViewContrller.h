@@ -1,13 +1,13 @@
 //
-//  ViewController.h
+//  BaseViewContrller.h
 //  Fortune
 //
-//  Created by yons on 13-8-15.
+//  Created by yons on 13-8-18.
 //  Copyright (c) 2013年 yons. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface BaseViewContrller : UIViewController
 
 @end

@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E43DCF1217BFE7030050CE25 /* BaseViewContrller.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCF1117BFE7030050CE25 /* BaseViewContrller.m */; };
+		E43DCF1517BFE7300050CE25 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCF1417BFE7300050CE25 /* SettingController.m */; };
+		E43DCF1817BFE8240050CE25 /* FortuneController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCF1717BFE8240050CE25 /* FortuneController.m */; };
+		E43DCF1B17BFE86D0050CE25 /* FengshuiController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCF1A17BFE86C0050CE25 /* FengshuiController.m */; };
+		E43DCF1E17BFE8B10050CE25 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCF1D17BFE8B10050CE25 /* GameController.m */; };
+		E43DCF2117BFE9E80050CE25 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCF2017BFE9E80050CE25 /* UIViewAdditions.m */; };
+		E43DCF2717BFEA750050CE25 /* menuicon_home.png in Resources */ = {isa = PBXBuildFile; fileRef = E43DCF2317BFEA750050CE25 /* menuicon_home.png */; };
+		E43DCF2817BFEA750050CE25 /* menuicon_one.png in Resources */ = {isa = PBXBuildFile; fileRef = E43DCF2417BFEA750050CE25 /* menuicon_one.png */; };
+		E43DCF2917BFEA750050CE25 /* menuicon_ser.png in Resources */ = {isa = PBXBuildFile; fileRef = E43DCF2517BFEA750050CE25 /* menuicon_ser.png */; };
+		E43DCF2A17BFEA750050CE25 /* menuicon_set.png in Resources */ = {isa = PBXBuildFile; fileRef = E43DCF2617BFEA750050CE25 /* menuicon_set.png */; };
+		E43DCF2C17BFEA9D0050CE25 /* menuBG.png in Resources */ = {isa = PBXBuildFile; fileRef = E43DCF2B17BFEA9D0050CE25 /* menuBG.png */; };
+		E43DCF2E17BFEABE0050CE25 /* tabbar_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = E43DCF2D17BFEABE0050CE25 /* tabbar_selected.png */; };
+		E43DCF3117BFED380050CE25 /* HCNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E43DCF3017BFED380050CE25 /* HCNavigationBar.m */; };
+		E43DCF3417BFEE090050CE25 /* navigationbar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E43DCF3217BFEE080050CE25 /* navigationbar_bg.png */; };
+		E43DCF3517BFEE090050CE25 /* navigationbar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E43DCF3317BFEE080050CE25 /* navigationbar_bg@2x.png */; };
 		E4A06FD417BD24360030F328 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A06FD317BD24360030F328 /* UIKit.framework */; };
 		E4A06FD617BD24360030F328 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A06FD517BD24360030F328 /* Foundation.framework */; };
 		E4A06FD817BD24360030F328 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A06FD717BD24360030F328 /* CoreGraphics.framework */; };
@@ -16,12 +31,34 @@
 		E4A06FE617BD24360030F328 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E4A06FE517BD24360030F328 /* Default.png */; };
 		E4A06FE817BD24360030F328 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4A06FE717BD24360030F328 /* Default@2x.png */; };
 		E4A06FEA17BD24360030F328 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4A06FE917BD24360030F328 /* Default-568h@2x.png */; };
-		E4A06FED17BD24360030F328 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A06FEC17BD24360030F328 /* ViewController.m */; };
-		E4A06FF017BD24360030F328 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A06FEE17BD24360030F328 /* ViewController_iPhone.xib */; };
-		E4A06FF317BD24360030F328 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A06FF117BD24360030F328 /* ViewController_iPad.xib */; };
+		E4A06FED17BD24360030F328 /* FTMainTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4A06FEC17BD24360030F328 /* FTMainTabController.m */; };
+		E4A06FF017BD24360030F328 /* FTMainTabController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A06FEE17BD24360030F328 /* FTMainTabController_iPhone.xib */; };
+		E4A06FF317BD24360030F328 /* FTMainTabController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4A06FF117BD24360030F328 /* FTMainTabController_iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E43DCF1017BFE7030050CE25 /* BaseViewContrller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewContrller.h; sourceTree = "<group>"; };
+		E43DCF1117BFE7030050CE25 /* BaseViewContrller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewContrller.m; sourceTree = "<group>"; };
+		E43DCF1317BFE7300050CE25 /* SettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingController.h; sourceTree = "<group>"; };
+		E43DCF1417BFE7300050CE25 /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingController.m; sourceTree = "<group>"; };
+		E43DCF1617BFE8240050CE25 /* FortuneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FortuneController.h; sourceTree = "<group>"; };
+		E43DCF1717BFE8240050CE25 /* FortuneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FortuneController.m; sourceTree = "<group>"; };
+		E43DCF1917BFE86C0050CE25 /* FengshuiController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FengshuiController.h; sourceTree = "<group>"; };
+		E43DCF1A17BFE86C0050CE25 /* FengshuiController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FengshuiController.m; sourceTree = "<group>"; };
+		E43DCF1C17BFE8B10050CE25 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		E43DCF1D17BFE8B10050CE25 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
+		E43DCF1F17BFE9E80050CE25 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
+		E43DCF2017BFE9E80050CE25 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+		E43DCF2317BFEA750050CE25 /* menuicon_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuicon_home.png; sourceTree = "<group>"; };
+		E43DCF2417BFEA750050CE25 /* menuicon_one.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuicon_one.png; sourceTree = "<group>"; };
+		E43DCF2517BFEA750050CE25 /* menuicon_ser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuicon_ser.png; sourceTree = "<group>"; };
+		E43DCF2617BFEA750050CE25 /* menuicon_set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuicon_set.png; sourceTree = "<group>"; };
+		E43DCF2B17BFEA9D0050CE25 /* menuBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBG.png; sourceTree = "<group>"; };
+		E43DCF2D17BFEABE0050CE25 /* tabbar_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbar_selected.png; sourceTree = "<group>"; };
+		E43DCF2F17BFED370050CE25 /* HCNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCNavigationBar.h; sourceTree = "<group>"; };
+		E43DCF3017BFED380050CE25 /* HCNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCNavigationBar.m; sourceTree = "<group>"; };
+		E43DCF3217BFEE080050CE25 /* navigationbar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigationbar_bg.png; sourceTree = "<group>"; };
+		E43DCF3317BFEE080050CE25 /* navigationbar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationbar_bg@2x.png"; sourceTree = "<group>"; };
 		E4A06FD017BD24360030F328 /* Fortune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fortune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A06FD317BD24360030F328 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E4A06FD517BD24360030F328 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -35,10 +72,10 @@
 		E4A06FE517BD24360030F328 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E4A06FE717BD24360030F328 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E4A06FE917BD24360030F328 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		E4A06FEB17BD24360030F328 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E4A06FEC17BD24360030F328 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E4A06FEF17BD24360030F328 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		E4A06FF217BD24360030F328 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		E4A06FEB17BD24360030F328 /* FTMainTabController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTMainTabController.h; sourceTree = "<group>"; };
+		E4A06FEC17BD24360030F328 /* FTMainTabController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTMainTabController.m; sourceTree = "<group>"; };
+		E4A06FEF17BD24360030F328 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FTMainTabController_iPhone.xib; sourceTree = "<group>"; };
+		E4A06FF217BD24360030F328 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FTMainTabController_iPad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +92,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E43DCF0F17BFE6A20050CE25 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E43DCF2F17BFED370050CE25 /* HCNavigationBar.h */,
+				E43DCF3017BFED380050CE25 /* HCNavigationBar.m */,
+				E43DCF1F17BFE9E80050CE25 /* UIViewAdditions.h */,
+				E43DCF2017BFE9E80050CE25 /* UIViewAdditions.m */,
+				E4A06FEB17BD24360030F328 /* FTMainTabController.h */,
+				E4A06FEC17BD24360030F328 /* FTMainTabController.m */,
+				E43DCF1017BFE7030050CE25 /* BaseViewContrller.h */,
+				E43DCF1117BFE7030050CE25 /* BaseViewContrller.m */,
+				E43DCF1317BFE7300050CE25 /* SettingController.h */,
+				E43DCF1417BFE7300050CE25 /* SettingController.m */,
+				E43DCF1617BFE8240050CE25 /* FortuneController.h */,
+				E43DCF1717BFE8240050CE25 /* FortuneController.m */,
+				E43DCF1917BFE86C0050CE25 /* FengshuiController.h */,
+				E43DCF1A17BFE86C0050CE25 /* FengshuiController.m */,
+				E43DCF1C17BFE8B10050CE25 /* GameController.h */,
+				E43DCF1D17BFE8B10050CE25 /* GameController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E43DCF2217BFEA680050CE25 /* IMG */ = {
+			isa = PBXGroup;
+			children = (
+				E43DCF3217BFEE080050CE25 /* navigationbar_bg.png */,
+				E43DCF3317BFEE080050CE25 /* navigationbar_bg@2x.png */,
+				E43DCF2D17BFEABE0050CE25 /* tabbar_selected.png */,
+				E43DCF2B17BFEA9D0050CE25 /* menuBG.png */,
+				E43DCF2317BFEA750050CE25 /* menuicon_home.png */,
+				E43DCF2417BFEA750050CE25 /* menuicon_one.png */,
+				E43DCF2517BFEA750050CE25 /* menuicon_ser.png */,
+				E43DCF2617BFEA750050CE25 /* menuicon_set.png */,
+			);
+			name = IMG;
+			sourceTree = "<group>";
+		};
 		E4A06FC717BD24360030F328 = {
 			isa = PBXGroup;
 			children = (
@@ -85,12 +160,10 @@
 		E4A06FD917BD24360030F328 /* Fortune */ = {
 			isa = PBXGroup;
 			children = (
+				E43DCF0F17BFE6A20050CE25 /* Controllers */,
 				E4A06FE217BD24360030F328 /* AppDelegate.h */,
 				E4A06FE317BD24360030F328 /* AppDelegate.m */,
-				E4A06FEB17BD24360030F328 /* ViewController.h */,
-				E4A06FEC17BD24360030F328 /* ViewController.m */,
-				E4A06FEE17BD24360030F328 /* ViewController_iPhone.xib */,
-				E4A06FF117BD24360030F328 /* ViewController_iPad.xib */,
+				E43DCF2217BFEA680050CE25 /* IMG */,
 				E4A06FDA17BD24360030F328 /* Supporting Files */,
 			);
 			path = Fortune;
@@ -99,6 +172,8 @@
 		E4A06FDA17BD24360030F328 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E4A06FEE17BD24360030F328 /* FTMainTabController_iPhone.xib */,
+				E4A06FF117BD24360030F328 /* FTMainTabController_iPad.xib */,
 				E4A06FDB17BD24360030F328 /* Fortune-Info.plist */,
 				E4A06FDC17BD24360030F328 /* InfoPlist.strings */,
 				E4A06FDF17BD24360030F328 /* main.m */,
@@ -165,8 +240,16 @@
 				E4A06FE617BD24360030F328 /* Default.png in Resources */,
 				E4A06FE817BD24360030F328 /* Default@2x.png in Resources */,
 				E4A06FEA17BD24360030F328 /* Default-568h@2x.png in Resources */,
-				E4A06FF017BD24360030F328 /* ViewController_iPhone.xib in Resources */,
-				E4A06FF317BD24360030F328 /* ViewController_iPad.xib in Resources */,
+				E4A06FF017BD24360030F328 /* FTMainTabController_iPhone.xib in Resources */,
+				E4A06FF317BD24360030F328 /* FTMainTabController_iPad.xib in Resources */,
+				E43DCF2717BFEA750050CE25 /* menuicon_home.png in Resources */,
+				E43DCF2817BFEA750050CE25 /* menuicon_one.png in Resources */,
+				E43DCF2917BFEA750050CE25 /* menuicon_ser.png in Resources */,
+				E43DCF2A17BFEA750050CE25 /* menuicon_set.png in Resources */,
+				E43DCF2C17BFEA9D0050CE25 /* menuBG.png in Resources */,
+				E43DCF2E17BFEABE0050CE25 /* tabbar_selected.png in Resources */,
+				E43DCF3417BFEE090050CE25 /* navigationbar_bg.png in Resources */,
+				E43DCF3517BFEE090050CE25 /* navigationbar_bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +262,14 @@
 			files = (
 				E4A06FE017BD24360030F328 /* main.m in Sources */,
 				E4A06FE417BD24360030F328 /* AppDelegate.m in Sources */,
-				E4A06FED17BD24360030F328 /* ViewController.m in Sources */,
+				E4A06FED17BD24360030F328 /* FTMainTabController.m in Sources */,
+				E43DCF1217BFE7030050CE25 /* BaseViewContrller.m in Sources */,
+				E43DCF1517BFE7300050CE25 /* SettingController.m in Sources */,
+				E43DCF1817BFE8240050CE25 /* FortuneController.m in Sources */,
+				E43DCF1B17BFE86D0050CE25 /* FengshuiController.m in Sources */,
+				E43DCF1E17BFE8B10050CE25 /* GameController.m in Sources */,
+				E43DCF2117BFE9E80050CE25 /* UIViewAdditions.m in Sources */,
+				E43DCF3117BFED380050CE25 /* HCNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,20 +284,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		E4A06FEE17BD24360030F328 /* ViewController_iPhone.xib */ = {
+		E4A06FEE17BD24360030F328 /* FTMainTabController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E4A06FEF17BD24360030F328 /* en */,
 			);
-			name = ViewController_iPhone.xib;
+			name = FTMainTabController_iPhone.xib;
 			sourceTree = "<group>";
 		};
-		E4A06FF117BD24360030F328 /* ViewController_iPad.xib */ = {
+		E4A06FF117BD24360030F328 /* FTMainTabController_iPad.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E4A06FF217BD24360030F328 /* en */,
 			);
-			name = ViewController_iPad.xib;
+			name = FTMainTabController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -278,6 +368,7 @@
 				GCC_PREFIX_HEADER = "Fortune/Fortune-Prefix.pch";
 				INFOPLIST_FILE = "Fortune/Fortune-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -289,6 +380,7 @@
 				GCC_PREFIX_HEADER = "Fortune/Fortune-Prefix.pch";
 				INFOPLIST_FILE = "Fortune/Fortune-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -312,6 +404,7 @@
 				E4A06FF817BD24360030F328 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
