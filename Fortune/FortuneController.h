@@ -9,5 +9,9 @@
 #import "BaseViewContrller.h"
 
 @interface FortuneController : BaseViewContrller
-
+{
+    NSTimer *timer;
+    int index;
+    UIImageView *image;
+}
 @end
