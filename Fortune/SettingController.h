@@ -7,7 +7,11 @@
 //
 
 #import "BaseViewContrller.h"
+#import "FMDatabase.h"
 
 @interface SettingController : BaseViewContrller
-
+{
+    FMDatabase *db;
+    UIButton *but;
+}
 @end

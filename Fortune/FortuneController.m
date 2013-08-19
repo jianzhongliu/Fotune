@@ -7,6 +7,12 @@
 //
 
 #import "FortuneController.h"
+#import "FortuneDetailController.h"
+@interface FortuneController ()
+{
+    NSMutableString *keywordsString;
+}
+@end
 
 @implementation FortuneController
 
@@ -27,16 +33,26 @@
     image=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"menuicon_ser.png"]];
     image.frame=CGRectMake(50, 200, 60, 60);
     [self.view addSubview:image];
+
+    UIButton *butGo=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    butGo.frame=CGRectMake(200, 300, 60, 60);
+    [butGo addTarget:self action:@selector(go) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:butGo];
+    
+}
+-(void)go{
+    FortuneDetailController *controller = [[FortuneDetailController alloc] init];
+    controller.key = keywordsString;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-
+    keywordsString = [NSMutableString string];
 }
 
 #pragma mark - privateMethods
@@ -46,13 +62,18 @@
 }
 
 -(void)time{
-        NSLog(@"%d",arc4random()%2);
+    int i = arc4random()%2;
     
     if(index == 81){
+        if(i){
+            [keywordsString appendString:@"圈"];
+        }else{
+            [keywordsString appendString:@"叉"];
+        }
         [timer invalidate];
-        NSLog(@"您的签%d",arc4random()%2);
+        NSLog(@"您的签%d",i);
     }
-    if(arc4random()%2){
+    if(i){
     image.image=[UIImage imageNamed:@"menuicon_ser.png"];
     }else{
     image.image=[UIImage imageNamed:@"menuicon_set.png"];
