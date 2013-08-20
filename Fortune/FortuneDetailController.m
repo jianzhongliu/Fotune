@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     BaseObject *base=[[DBManager sharedInstance] getObjByContent:_key];
-    NSLog(@"%@",base.content);
+    NSLog(@"%@==%@",self.key, base.content);
 
 	// Do any additional setup after loading the view.
 }

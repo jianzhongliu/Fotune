@@ -11,6 +11,8 @@
 @interface FortuneController ()
 {
     NSMutableString *keywordsString;
+    UIButton *bu;
+    UIButton *butGo;
 }
 @end
 
@@ -25,8 +27,10 @@
     self.view.backgroundColor=[UIColor greenColor];
 //    [[UIApplication sharedApplication] setStatusBarHidden:YES];
 
-    UIButton *bu=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    bu=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    bu.tag = 0;
     bu.frame = CGRectMake(0, 50, 320, 40);
+    [bu setTitle:@"开始求签" forState:UIControlStateNormal];
     [bu addTarget:self action:@selector(timeout) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:bu];
     
@@ -34,12 +38,13 @@
     image.frame=CGRectMake(50, 200, 60, 60);
     [self.view addSubview:image];
 
-    UIButton *butGo=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    butGo=[UIButton buttonWithType:UIButtonTypeRoundedRect];
     butGo.frame=CGRectMake(200, 300, 60, 60);
     [butGo addTarget:self action:@selector(go) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:butGo];
     
 }
+
 -(void)go{
     FortuneDetailController *controller = [[FortuneDetailController alloc] init];
     controller.key = keywordsString;
@@ -57,6 +62,13 @@
 
 #pragma mark - privateMethods
 -(void)timeout{
+    bu.enabled = NO;
+    bu.tag = bu.tag+1;
+    NSString *tempStr = [NSString stringWithFormat:@"还剩%d签", 6-bu.tag];
+    [bu setTitle:tempStr forState:UIControlStateNormal];
+    if(bu.tag == 6){
+    [bu setTitle:@"最后一签" forState:UIControlStateNormal];
+    }
     index = 0;
     timer = [NSTimer scheduledTimerWithTimeInterval:0.06 target:self selector:@selector(time) userInfo:nil repeats:YES];
 }
@@ -72,14 +84,19 @@
         }
         [timer invalidate];
         NSLog(@"您的签%d",i);
+        if(bu.tag == 6){
+            bu.enabled = NO;
+            [bu setTitle:keywordsString forState:UIControlStateNormal];
+        }else{
+        bu.enabled = YES;
+        }
     }
     if(i){
     image.image=[UIImage imageNamed:@"menuicon_ser.png"];
     }else{
     image.image=[UIImage imageNamed:@"menuicon_set.png"];
     }
-    
-    
     index ++;
+
 }
 @end
