@@ -47,55 +47,55 @@
 //    [rs close];
     
     
-    but=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    but.frame=CGRectMake(0, 0, 320, 40);
+    but = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    but.frame = CGRectMake(0, 0, 320, 40);
     [but addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
     [but setTitle:@"创建表" forState:UIControlStateNormal];
-    but.tag=109;
+    but.tag = 109;
     [self.view addSubview:but];
-    but=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    but.frame=CGRectMake(0, 100, 320, 40);
-    but.tag=101;
+    but = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    but.frame = CGRectMake(0, 100, 320, 40);
+    but.tag = 101;
     [but addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
     [but setTitle:@"插入数据" forState:UIControlStateNormal];
     [self.view addSubview:but];
-    but=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    but.frame=CGRectMake(0, 200, 320, 40);
-    but.tag=102;
+    but = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    but.frame = CGRectMake(0, 200, 320, 40);
+    but.tag = 102;
     [but addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
     [but setTitle:@"更新数据" forState:UIControlStateNormal];
     [self.view addSubview:but];
-    but=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    but.frame=CGRectMake(0, 300, 320, 40);but.tag=103;
+    but = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    but.frame = CGRectMake(0, 300, 320, 40);but.tag=103;
     [but addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
     [but setTitle:@"删除数据" forState:UIControlStateNormal];
     [self.view addSubview:but];
-    but=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    but.frame=CGRectMake(0, 350, 320, 40);but.tag=104;
+    but = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    but.frame = CGRectMake(0, 350, 320, 40);but.tag = 104;
     [but addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
     [but setTitle:@"查询数据" forState:UIControlStateNormal];
     [self.view addSubview:but];
 
 }
 -(void)click:(id)sender{
-    UIButton *bu=(UIButton *)sender;
+    UIButton *bu = (UIButton *)sender;
     NSLog(@"%d",bu.tag);
-    if(bu.tag==109){
+    if(bu.tag == 109){
         [db executeUpdate:@"CREATE TABLE jujiafengshui(ID integer, title text, content text)"];
     }
-    if(bu.tag==101){
+    if(bu.tag == 101){
         [self insertValue];
 //        [db executeUpdate:@"INSERT INTO gongsiquming(Name, Age) VALUES(?, ?)", @"Eric", [NSNumber numberWithInt:25]]  ;
     }
-    if(bu.tag==102){
-      BaseObject *base=[[DBManager sharedInstance] getObjByContent:@"圈圈圈叉叉叉"];
+    if(bu.tag == 102){
+      BaseObject *base = [[DBManager sharedInstance] getObjByContent:@"圈圈圈叉叉叉"];
         NSLog(@"%@",base.content);
 //        [db executeUpdate:@"UPDATE gongsiquming SET Name = ? WHERE Name = ? ", @"Michael", @"Eric"];
     }
-    if(bu.tag==103){
+    if(bu.tag == 103){
 //        [db executeUpdate:@"DELETE FROM Users WHERE Name = ?", @"Michael"];
     }
-    if(bu.tag==104){
+    if(bu.tag == 104){
         FMResultSet *rs = [db executeQuery:@"SELECT * FROM jujiafengshui"];
         rs = [db executeQuery:@"SELECT * FROM jujiafengshui"];
         while ([rs next]){
@@ -105,9 +105,9 @@
     }
 }
 -(void)insertValue{
-    NSMutableString *str = [[NSMutableString alloc]initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"jujiafengshui.txt" ofType:nil] encoding:NSUTF8StringEncoding error:nil];
+    NSMutableString *str = [[NSMutableString alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"jujiafengshui.txt" ofType:nil] encoding:NSUTF8StringEncoding error:nil];
     NSLog(@"%@",str);
-    NSArray *suparr=[str componentsSeparatedByString:@"==="];
+    NSArray *suparr = [str componentsSeparatedByString:@"==="];
     int i = 0;
     for (NSString *tempstr in suparr) {
         i++;

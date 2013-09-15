@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FTMainTabController : UITabBarController<UITabBarControllerDelegate>
+@interface FTMainTabController : UITabBarController <UITabBarControllerDelegate>
 {
     UIView      *_contentView;
     UIImageView *_selectView;
