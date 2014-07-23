@@ -20,14 +20,23 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    
+    UILabel *rule = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, 300, 150)];
+    [rule setFont:[UIFont systemFontOfSize:12]];
+    rule.lineBreakMode = NSLineBreakByWordWrapping;
+    rule.backgroundColor = [UIColor clearColor];
+    rule.numberOfLines = 0;
+    rule.text = @"先点击\"开始求签\"，诚心求满6签之后就会得到求签的结果，点击\"看结果\"去查看结果";
+    [self.view addSubview:rule];
     CGRect tempRect = CGRectMake(0.0f, 0.0f, 320.0f, 44.0f);
     UIImageView * textbg = [[UIImageView alloc]  initWithFrame:tempRect];
     textbg.image = [UIImage imageNamed:@"navigationbar_bg.png"];
     [self.view addSubview:textbg];
-    self.view.backgroundColor=[UIColor greenColor];
+    self.view.backgroundColor=[UIColor lightGrayColor];
 //    [[UIApplication sharedApplication] setStatusBarHidden:YES];
 
-    bu=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    bu=[UIButton buttonWithType:UIButtonTypeCustom];
+    [bu setBackgroundColor:[UIColor purpleColor]];
     bu.tag = 0;
     bu.frame = CGRectMake(0, 50, 320, 40);
     [bu setTitle:@"开始求签" forState:UIControlStateNormal];
@@ -36,10 +45,13 @@
     
     image=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"menuicon_ser.png"]];
     image.frame=CGRectMake(50, 200, 60, 60);
+    image.alpha = 0.0f;
     [self.view addSubview:image];
 
-    butGo=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    butGo.frame=CGRectMake(200, 300, 60, 60);
+    butGo=[UIButton buttonWithType:UIButtonTypeCustom];
+    [butGo setBackgroundColor:[UIColor purpleColor]];
+    [butGo setTitle:@"看结果" forState:UIControlStateNormal];
+    butGo.frame=CGRectMake(200, 300, 80, 60);
     [butGo addTarget:self action:@selector(go) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:butGo];
     
@@ -48,7 +60,10 @@
 -(void)go{
     FortuneDetailController *controller = [[FortuneDetailController alloc] init];
     controller.key = keywordsString;
-    [self.navigationController pushViewController:controller animated:YES];
+    self.navigationController.navigationBar.hidden = NO;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
+    [self presentViewController:nav animated:YES completion:^{
+    }];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
@@ -92,6 +107,7 @@
         }
     }
     if(i){
+    image.alpha = 1;
     image.image=[UIImage imageNamed:@"menuicon_ser.png"];
     }else{
     image.image=[UIImage imageNamed:@"menuicon_set.png"];

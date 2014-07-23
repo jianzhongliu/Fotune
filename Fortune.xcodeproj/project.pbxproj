@@ -124,14 +124,9 @@
 		E43DCF0F17BFE6A20050CE25 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E43DCF2F17BFED370050CE25 /* HCNavigationBar.h */,
-				E43DCF3017BFED380050CE25 /* HCNavigationBar.m */,
-				E43DCF1F17BFE9E80050CE25 /* UIViewAdditions.h */,
-				E43DCF2017BFE9E80050CE25 /* UIViewAdditions.m */,
+				FC1FD208197FC2A000E76E35 /* Base */,
 				E4A06FEB17BD24360030F328 /* FTMainTabController.h */,
 				E4A06FEC17BD24360030F328 /* FTMainTabController.m */,
-				E43DCF1017BFE7030050CE25 /* BaseViewContrller.h */,
-				E43DCF1117BFE7030050CE25 /* BaseViewContrller.m */,
 				E43DCF1317BFE7300050CE25 /* SettingController.h */,
 				E43DCF1417BFE7300050CE25 /* SettingController.m */,
 				E43DCF1617BFE8240050CE25 /* FortuneController.h */,
@@ -254,6 +249,19 @@
 				E4A06FE917BD24360030F328 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC1FD208197FC2A000E76E35 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E43DCF1F17BFE9E80050CE25 /* UIViewAdditions.h */,
+				E43DCF2017BFE9E80050CE25 /* UIViewAdditions.m */,
+				E43DCF1017BFE7030050CE25 /* BaseViewContrller.h */,
+				E43DCF1117BFE7030050CE25 /* BaseViewContrller.m */,
+				E43DCF2F17BFED370050CE25 /* HCNavigationBar.h */,
+				E43DCF3017BFED380050CE25 /* HCNavigationBar.m */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

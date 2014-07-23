@@ -28,16 +28,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     BaseObject *base=[[DBManager sharedInstance] getObjByContent:_key];
-    NSLog(@"%@==%@",self.key, base.content);
-
-	// Do any additional setup after loading the view.
+    
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    UILabel *rule = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, 300, 150)];
+    [rule setFont:[UIFont systemFontOfSize:12]];
+    rule.lineBreakMode = NSLineBreakByWordWrapping;
+    rule.backgroundColor = [UIColor clearColor];
+    rule.numberOfLines = 0;
+    rule.text = base.content;
+    [self.view addSubview:rule];
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 @end

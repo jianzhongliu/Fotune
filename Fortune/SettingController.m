@@ -29,24 +29,6 @@
     if (![db open]) {
         return ;
     }
-//    //创建表
-//    [db executeUpdate:@"CREATE TABLE Users(Name text, Age integer)"];
-//    //插入数据
-//    [db executeUpdate:@"INSERT INTO Users(Name, Age) VALUES(?, ?)", @"Eric", [NSNumber numberWithInt:25]]  ;
-//    //更新数据
-//    [db executeUpdate:@"UPDATE Users SET Name = ? WHERE Name = ? ",@"Michael", @"Eric"];
-//    //
-//    [db executeUpdate:@"DELETE FROM Users WHERE Name = ?", @"Michael"];
-//    
-//    //查询数据
-//    FMResultSet *rs = [db executeQuery:@"SELECT * FROM Users"];
-//    rs = [db executeQuery:@"SELECT * FROM Users WHERE Age = ?", @"25"];
-//    while ([rs next]){
-//        NSLog(@"%@ %@", [rs stringForColumn:@"Name"], [rs stringForColumn:@"Age"]);
-//    }
-//    [rs close];
-    
-    
     but = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     but.frame = CGRectMake(0, 0, 320, 40);
     [but addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchDown];
