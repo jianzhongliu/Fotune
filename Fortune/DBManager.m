@@ -28,7 +28,7 @@
     return base;
 }
 -(void)openDB{
-   db = [[FMDatabase alloc]initWithPath:[[NSBundle mainBundle] pathForResource:@"DB.sqlite" ofType:nil]];
+   db = [[FMDatabase alloc]initWithPath:[[NSBundle mainBundle] pathForResource:@"DB" ofType:@"sqlite"]];
     if (![db open]) {
         return ;
     }
@@ -81,8 +81,8 @@
 }
 -(BaseObject *)getObjByContent:(NSString *)key{
     [self openDB];
-    FMResultSet *rs = [db executeQuery:@"SELECT * FROM guaming"];
-    NSString *str=[NSString stringWithFormat:@"SELECT * FROM guaming WHERE content LIKE  '%@%@%@'",@"%", key, @"%"];
+    FMResultSet *rs ;//= [db executeQuery:@"SELECT * FROM guaming"];
+    NSString *str=[NSString stringWithFormat:@"SELECT * FROM guaming WHERE content LIKE '%@%@%@'",@"%", key, @"%"];
     rs = [db executeQuery:str];
     BaseObject *base=[[BaseObject alloc]init];
     while ([rs next]){

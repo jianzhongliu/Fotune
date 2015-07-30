@@ -10,7 +10,7 @@
 
 @interface BaseObject : NSObject
 
-@property(assign, nonatomic)NSString *ID;
-@property(assign, nonatomic)NSString *title;
-@property(assign, nonatomic)NSString *content;
+@property(strong, nonatomic)NSString *ID;
+@property(strong, nonatomic)NSString *title;
+@property(strong, nonatomic)NSString *content;
 @end

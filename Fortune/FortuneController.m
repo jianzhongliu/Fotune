@@ -13,6 +13,7 @@
     NSMutableString *keywordsString;
     UIButton *bu;
     UIButton *butGo;
+    BOOL status;
 }
 @end
 
@@ -20,13 +21,13 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    
+    status = NO;
     UILabel *rule = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, 300, 150)];
     [rule setFont:[UIFont systemFontOfSize:12]];
     rule.lineBreakMode = NSLineBreakByWordWrapping;
     rule.backgroundColor = [UIColor clearColor];
     rule.numberOfLines = 0;
-    rule.text = @"先点击\"开始求签\"，诚心求满6签之后就会得到求签的结果，点击\"看结果\"去查看结果";
+//    rule.text = @"先点击\"开始\"，诚心求满6签之后就会得到求签的结果，点击\"看结果\"去查看结果";
     [self.view addSubview:rule];
     CGRect tempRect = CGRectMake(0.0f, 0.0f, 320.0f, 44.0f);
     UIImageView * textbg = [[UIImageView alloc]  initWithFrame:tempRect];
@@ -39,7 +40,7 @@
     [bu setBackgroundColor:[UIColor purpleColor]];
     bu.tag = 0;
     bu.frame = CGRectMake(0, 50, 320, 40);
-    [bu setTitle:@"开始求签" forState:UIControlStateNormal];
+    [bu setTitle:@"button" forState:UIControlStateNormal];
     [bu addTarget:self action:@selector(timeout) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:bu];
     
@@ -50,10 +51,10 @@
 
     butGo=[UIButton buttonWithType:UIButtonTypeCustom];
     [butGo setBackgroundColor:[UIColor purpleColor]];
-    [butGo setTitle:@"看结果" forState:UIControlStateNormal];
+    [butGo setTitle:@"结果" forState:UIControlStateNormal];
     butGo.frame=CGRectMake(200, 300, 80, 60);
     [butGo addTarget:self action:@selector(go) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:butGo];
+//    [self.view addSubview:butGo];
     
 }
 
@@ -66,10 +67,6 @@
     }];
 }
 
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-}
-
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     keywordsString = [NSMutableString string];
@@ -77,42 +74,25 @@
 
 #pragma mark - privateMethods
 -(void)timeout{
-    bu.enabled = NO;
-    bu.tag = bu.tag+1;
-    NSString *tempStr = [NSString stringWithFormat:@"还剩%d签", 6-bu.tag];
-    [bu setTitle:tempStr forState:UIControlStateNormal];
-    if(bu.tag == 6){
-    [bu setTitle:@"最后一签" forState:UIControlStateNormal];
-    }
-    index = 0;
+
     timer = [NSTimer scheduledTimerWithTimeInterval:0.06 target:self selector:@selector(time) userInfo:nil repeats:YES];
 }
 
 -(void)time{
     int i = arc4random()%2;
-    
-    if(index == 81){
-        if(i){
-            [keywordsString appendString:@"圈"];
-        }else{
+    if (status) {
+        return;
+    }
+    if (keywordsString.length < 6) {
+        if(i / 2.0f > 1/2){
             [keywordsString appendString:@"叉"];
-        }
-        [timer invalidate];
-        NSLog(@"您的签%d",i);
-        if(bu.tag == 6){
-            bu.enabled = NO;
-            [bu setTitle:keywordsString forState:UIControlStateNormal];
         }else{
-        bu.enabled = YES;
+            [keywordsString appendString:@"圈"];
         }
+    } else if (keywordsString.length == 6){
+        status = YES;
+        [self go];
     }
-    if(i){
-    image.alpha = 1;
-    image.image=[UIImage imageNamed:@"menuicon_ser.png"];
-    }else{
-    image.image=[UIImage imageNamed:@"menuicon_set.png"];
-    }
-    index ++;
-
 }
+
 @end

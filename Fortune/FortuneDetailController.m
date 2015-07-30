@@ -29,15 +29,16 @@
 {
     [super viewDidLoad];
     
-    BaseObject *base=[[DBManager sharedInstance] getObjByContent:_key];
+    BaseObject *baseobject=[[DBManager sharedInstance] getObjByContent:_key];
     
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    UILabel *rule = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, 300, 150)];
+    UILabel *rule = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, 300, 500)];
     [rule setFont:[UIFont systemFontOfSize:12]];
     rule.lineBreakMode = NSLineBreakByWordWrapping;
     rule.backgroundColor = [UIColor clearColor];
     rule.numberOfLines = 0;
-    rule.text = base.content;
+    rule.text = [NSString stringWithFormat:@"%@", baseobject.content];
     [self.view addSubview:rule];
 }
+
 @end

@@ -9,5 +9,4 @@
 #import "BaseObject.h"
 
 @implementation BaseObject
-@synthesize ID, title, content;
 @end
