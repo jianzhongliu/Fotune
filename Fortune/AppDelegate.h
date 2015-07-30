@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class FTMainTabController;
+#import "FortuneController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) FTMainTabController *viewController;
+@property (strong, nonatomic) FortuneController *viewController;
 
 @end
