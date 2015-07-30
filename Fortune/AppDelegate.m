@@ -17,7 +17,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    self.viewController = [[FortuneController alloc] initWithNibName:@"FortuneController" bundle:nil];
+    self.viewController = [[FortuneController alloc] init];
     UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:self.viewController];
 //    [nav setValue:[[HCNavigationBar alloc]init] forKeyPath:@"navigationBar"];
     [nav setNavigationBarHidden:YES];

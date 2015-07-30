@@ -54,7 +54,8 @@
     [butGo setTitle:@"结果" forState:UIControlStateNormal];
     butGo.frame=CGRectMake(200, 300, 80, 60);
     [butGo addTarget:self action:@selector(go) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:butGo];
+//    [self.view addSubview:butGo];
+    [self timeout];
 }
 
 -(void)go{
